@@ -19,18 +19,18 @@
     <ul class="nav navbar-nav">
 
     <% if !user_signed_in? %>
-      <li><%= link_to "Programs", "" %></li>
-      <li><%= link_to "Bootcamps", "" %></li>
+      <li><%= link_to "Programs", comingsoon_path %></li>
+      <li><%= link_to "Bootcamps", comingsoon_path %></li>
       <li><%= link_to "Testimonials", testimonials_path %></li>
-      <li><%= link_to "Blog", "" %></li>
-      <li><%= link_to "About", "" %></li>
+      <li><%= link_to "Blog", comingsoon_path %></li>
+      <li><%= link_to "About", comingsoon_path %></li>
 
 
 
     <% else %>
       <li><%= link_to "Breakfit Challenge", breakfit_path %></li>
       <li><%= link_to "Windmills", windmills_path %></li>
-      <li><%= link_to "Extras", "" %></li>
+      <li><%= link_to "Extras", comingsoon_path %></li>
     <% end %>
     </ul>
 
@@ -39,7 +39,7 @@
       
 
     <% if user_signed_in? %>
-        <li><%= link_to current_user.email, edit_user_registration_path %></li>
+        <li><%= link_to current_user.name, edit_user_registration_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
     <% else %>
         <li><%= link_to "Join Breakfit", new_user_registration_path %></li>

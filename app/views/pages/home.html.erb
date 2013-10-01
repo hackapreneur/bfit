@@ -15,6 +15,7 @@
             <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
           </p>
       <% else %>
+        <p><%= current_user.name %>,</p>
         <p>Thank you for checking out the home page of b-boy Jeromeskee,
 representing the World-Champion Massive Monkees Crew and the
 Legendary Rock Steady Crew. Jeromeskee is currently teaching

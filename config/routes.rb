@@ -6,7 +6,7 @@ Bfit::Application.routes.draw do
   get 'breakfit' => 'pages#breakfit'
   get 'windmills' => 'pages#windmills'
   get 'testimonials' => 'pages#testimonials'
-    get 'comingsoon' => 'pages#coming_soon'
+  get 'comingsoon' => 'pages#coming_soon'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
