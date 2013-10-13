@@ -148,6 +148,8 @@
 // Brand/project name
 
 .navbar-brand {
+  color: black;
+  font-weight:bold;
   float: left;
   padding: $navbar-padding-vertical $navbar-padding-horizontal;
   font-size: $font-size-large;
@@ -359,7 +361,7 @@
   border-color: $navbar-default-border;
 
   .navbar-brand {
-    color: $navbar-default-brand-color;
+    color: #000000;
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
