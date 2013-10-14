@@ -2,20 +2,16 @@
 
 <div class="container">
 
- <center>
-        <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/headerbanner.jpg" %>
-        </center>
-
+  <% if !user_signed_in? %>
   <div class="center jumbotron">
     <div class="container">
-      <% if !user_signed_in? %>
+
         <div class="row">
           <div class="col-md-8">
               <center>
               <font size="23" color="#C80000"><strong>Body Rock Breaking</strong></font>
               <font size color="#505050">by Jeromeskee</font>
               </center>
-
 
           <iframe src="//player.vimeo.com/video/76752860?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <center><strong>Online B-boy/Breakdance Tutorials</strong></center>
@@ -34,25 +30,15 @@
             <script type="text/javascript" src="http://forms.aweber.com/form/36/657753136.js"></script>
             <br>
             <p><strong>Follow Us for Video Updates!</strong></p>
-            <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/icons/Facebook-48.png" %>
-            <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/icons/Twitter+Bird-48.png" %>
-            <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/icons/YouTube1-48.png" %>
+            <%= link_to image_tag("https://s3.amazonaws.com/jeromeskeecoaching/icons/Facebook-48.png"), 'https://www.facebook.com/jeromeskee?fref=ts' %>
+            <%= link_to image_tag("https://s3.amazonaws.com/jeromeskeecoaching/icons/Twitter+Bird-48.png"), 'https://www.facebook.com/jeromeskee?fref=ts' %>
+            <%= link_to image_tag("https://s3.amazonaws.com/jeromeskeecoaching/icons/YouTube1-48.png"), 'https://www.facebook.com/jeromeskee?fref=ts' %>
+
           </div>
         </div>
-      <% else %>
-        <p><%= current_user.name %>,</p>
-        <p>Thank you for checking out the home page of b-boy Jeromeskee,
-representing the World-Champion Massive Monkees Crew and the
-Legendary Rock Steady Crew. Jeromeskee is currently teaching
-instructional b-boy/b-girl classes in the Seattle area. Click on the
-"Bootcamp" button for times and locations. Rock steady!</p>
-        <%= image_tag "https://scontent-a-sea.xx.fbcdn.net/hphotos-prn1/993421_10151872097640339_1529535341_n.jpg", :size => "250x300" %></br>
-        -Jeromeskee</br>
-      <% end %>
     </div>
   </div>
 </div>
-
 
 
  <div class="container">
@@ -74,6 +60,14 @@ instructional b-boy/b-girl classes in the Seattle area. Click on the
           <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
         </div>
       </div>
+
+
+      <% else %>
+
+        <%= render 'layouts/nav/mainhomenav' %>
+
+      <% end %>
+
 
       <hr>
 </div> <!-- /container -->

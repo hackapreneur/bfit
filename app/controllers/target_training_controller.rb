@@ -1,0 +1,2 @@
+class TargetTrainingController < ApplicationController
+end

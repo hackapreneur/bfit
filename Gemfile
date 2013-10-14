@@ -3,6 +3,14 @@ source 'https://rubygems.org'
 gem "simple_form", "~> 3.0.0"
 gem 'devise'
 
+group :development, :test do
+     gem 'sqlite3'
+end
+
+group :production do
+     gem 'pg'
+     gem 'rails_12factor'
+end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

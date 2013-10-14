@@ -1,54 +1,94 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
-  
-
   <div class="container">
 
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <%= link_to "Jeromeskee Coaching", root_path, :class => "navbar-brand"  %>
-  </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Jeromeskee Coaching", root_path, :class => "navbar-brand"  %>
+    </div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
 
-    <% if !user_signed_in? %>
-      <li><%= link_to "Programs", comingsoon_path %></li>
-      <li><%= link_to "Bootcamps", comingsoon_path %></li>
-      <li><%= link_to "Testimonials", testimonials_path %></li>
-      <li><%= link_to "Blog", comingsoon_path %></li>
-      <li><%= link_to "About", comingsoon_path %></li>
-
-
-
-    <% else %>
-      <li><%= link_to "Breakfit Challenge", breakfit_path %></li>
-      <li><%= link_to "Windmills", windmills_path %></li>
-      <li><%= link_to "Extras", comingsoon_path %></li>
-    <% end %>
-    </ul>
-
-
-    <ul class="nav navbar-nav navbar-right">
+      <% if !user_signed_in? %>
+        <li><%= link_to "Programs", comingsoon_path %></li>
+        <li><%= link_to "Bootcamps", comingsoon_path %></li>
+        <li><%= link_to "Testimonials", testimonials_path %></li>
+        <li><%= link_to "Blog", comingsoon_path %></li>
+        <li><%= link_to "About", comingsoon_path %></li>
+      <% else %>
+     
       
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Basics <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Stretches", basics_stretches_path %></li>
+          <li><%= link_to "Wrist", basics_wriststretches_path %></li>
+          <li><%= link_to "Foundation Principles", basics_foundationprinciples_path %></li>
+        </ul>
+      </li>
 
-    <% if user_signed_in? %>
-        <li><%= link_to current_user.name, edit_user_registration_path %></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-    <% else %>
-        <li><%= link_to "Click Here To Join!", new_user_registration_path , {:style=>'color:#000000; font-weight:bold', :class => "css_class"} %></li>
-        <li><%= link_to "Member Login", new_user_session_path %></li>
-    <% end %>
-    
 
-    </ul>
-  </div><!-- /.navbar-collapse -->
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Core <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Foundation Fundamentals", comingsoon_path %></li>
+          <li><%= link_to "Power Moves Now", comingsoon_path %></li>
+          <li><%= link_to "Body Rock Abs", testimonials_path %></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Target Training <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Rhythm and Musicality", comingsoon_path %></li>
+          <li><%= link_to "Endurance Training", comingsoon_path %></li>
+          <li><%= link_to "How to Cipher", testimonials_path %></li>
+          <li><%= link_to "How to Battle", testimonials_path %></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Bonus <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Interviews", testimonials_path %></li>
+          <li><%= link_to "Massive Monkees", testimonials_path %></li>
+          <li><%= link_to "Salsa Basics", testimonials_path %></li>
+        </ul>
+      </li>
+
+
+      <% end %>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        
+      <% if user_signed_in? %>
+          <li><%= link_to current_user.name, edit_user_registration_path %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+          <li><%= link_to "Click Here To Join!", new_user_registration_path , {:style=>'color:#000000; font-weight:bold', :class => "css_class"} %></li>
+          <li><%= link_to "Member Login", new_user_session_path %></li>
+      <% end %>
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
 
   </div>
 </nav>

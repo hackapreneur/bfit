@@ -8,6 +8,10 @@ Bfit::Application.routes.draw do
   get 'testimonials' => 'pages#testimonials'
   get 'comingsoon' => 'pages#coming_soon'
 
+  get 'basics' => 'basics#home'
+  get 'basics/stretches' => 'basics#stretches'
+  get 'basics/wriststretches' => 'basics#wristStretches'
+  get 'basics/foundationprinciples' => 'basics#foundationPrinciples'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

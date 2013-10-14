@@ -1,0 +1,2 @@
+module TargetTrainingHelper
+end
