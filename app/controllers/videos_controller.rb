@@ -26,9 +26,4 @@ class VideosController < ApplicationController
 
   private
 
-  def 
-  	
-  end
-
-
 end
