@@ -1,5 +1,17 @@
 Bfit::Application.routes.draw do
 
+  resources :categories 
+  resources :videos
+  resources :pins
+
+  get "videos/index"
+  get "videos/new"
+  get "videos/update"
+  get "videos/destroy"
+  get "video_content/new"
+  get "video_content/read"
+  get "video_content/update"
+  get "video_content/destroy"
   devise_for :users
   root :to => 'pages#home'
   get 'about' => 'pages#about'
@@ -12,6 +24,19 @@ Bfit::Application.routes.draw do
   get 'basics/stretches' => 'basics#stretches'
   get 'basics/wriststretches' => 'basics#wristStretches'
   get 'basics/foundationprinciples' => 'basics#foundationPrinciples'
+
+  get 'core' => 'core#home'
+  get 'core/foundation/toprock' => 'core#f_toprock'
+  get 'core/foundation/footwork1' => 'core#f_footwork_1'
+  get 'core/foundation/footwork2' => 'core#f_footwork_2'
+  get 'core/foundation/freeze1' => 'core#f_freeze_1'
+  get 'core/foundation/freeze2' => 'core#f_freeze_2'  
+
+  get 'adminCP' => 'admin_cp#index'
+  get 'adminCP/new' => 'admin_cp#new'
+  get 'adminCP/edit/' => 'admin_cp#edit'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

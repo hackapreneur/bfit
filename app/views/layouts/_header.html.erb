@@ -26,9 +26,8 @@
      
       
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          Basics <span class="caret"></span>
-        </a>
+        <%= link_to(raw("Basics" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
+
         <ul class="dropdown-menu">
           <li><%= link_to "Stretches", basics_stretches_path %></li>
           <li><%= link_to "Wrist", basics_wriststretches_path %></li>
@@ -38,9 +37,8 @@
 
 
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          Core <span class="caret"></span>
-        </a>
+        <%= link_to(raw("Core" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
+
         <ul class="dropdown-menu">
           <li><%= link_to "Foundation Fundamentals", comingsoon_path %></li>
           <li><%= link_to "Power Moves Now", comingsoon_path %></li>
@@ -49,9 +47,8 @@
       </li>
 
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          Target Training <span class="caret"></span>
-        </a>
+        <%= link_to(raw("Target Training" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
+
         <ul class="dropdown-menu">
           <li><%= link_to "Rhythm and Musicality", comingsoon_path %></li>
           <li><%= link_to "Endurance Training", comingsoon_path %></li>
@@ -61,9 +58,8 @@
       </li>
 
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          Bonus <span class="caret"></span>
-        </a>
+        <%= link_to(raw("Bonus" +("<span class= 'caret'></span>")), "#", :class => "dropdown-toggle", :data => {:toggle=>"dropdown"}) %>
+
         <ul class="dropdown-menu">
           <li><%= link_to "Interviews", testimonials_path %></li>
           <li><%= link_to "Massive Monkees", testimonials_path %></li>
@@ -71,10 +67,8 @@
         </ul>
       </li>
 
-
       <% end %>
       </ul>
-
 
       <ul class="nav navbar-nav navbar-right">
         
