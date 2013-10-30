@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem "simple_form", "~> 3.0.0"
 gem 'devise'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'rails_serve_static_assets'
 
 
 group :development, :test do
