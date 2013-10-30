@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Jeromeskee Coaching</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
+
   </head>
   <body>
     <%= render 'layouts/header' %>
     <center>
-        <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/headerbanner.jpg" %>
+        <%= image_tag "https://s3.amazonaws.com/jeromeskeecoaching/headerbanner.jpg", :class => "img-responsive" %>
         </center>
     <div class="container">
             <% flash.each do |name, msg| %>
@@ -19,6 +23,14 @@
     </div>
 
     <%= render 'layouts/footer' %>
+
+
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(".container").fitVids();
+  });
+</script>
 
   </body>
 </html>

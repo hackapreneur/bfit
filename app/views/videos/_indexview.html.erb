@@ -1,0 +1,26 @@
+<table>
+
+  <thead>
+  <tr>
+    <th>Videos</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.title %></td>
+        <td><%= video.description %></td>
+        <td><%= video.vimeoUrl %></td>
+        <td><%= link_to 'Show', video_path(video) %></td>
+        <td><%= link_to 'Edit', edit_video_path(video) %></td>
+        <td><%= link_to 'Delete', video_path(video), method: :delete, confirm: 'Are you sure you want to delete this category?' %></td>
+  <% end %>
+  </tbody>
+
+</table>
+<br>
+<%= link_to 'New Video', new_video_path %>

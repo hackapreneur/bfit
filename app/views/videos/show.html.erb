@@ -1,2 +1,34 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+
+
+<div class="row">
+
+  <div class="col-xs-2">
+
+    <%= render 'basics/basics_navleft' %>
+
+  </div>
+
+  <div class="col-xs-8">
+    <h3><%= @video.title %></h3>
+    <iframe src="<%= @video.vimeoUrl %>?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1" width="853" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    <ul class="pager">
+      <li class="previous">
+        <%= link_to '<- Back: Wrist Stretches', basics_wriststretches_path %>
+      </li>
+      <li class="next">
+        <%= link_to 'Next Section: Core Training ->', root_path %>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<br>
+<div class="jumbotron">
+  <div class="container">
+    <h2><%= @video.title %></h2>
+    <p><%= @video.description %></p>
+    <%= @video.vimeoUrl %>
+  </div>
+</div>

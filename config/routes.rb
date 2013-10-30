@@ -1,8 +1,10 @@
 Bfit::Application.routes.draw do
 
-  resources :categories 
+  resources :categories
+  resources :subcategories
   resources :videos
   resources :pins
+  resources :charges
 
   get "videos/index"
   get "videos/new"

@@ -4,34 +4,18 @@
 
 
 
-<h3>User Management:</h3>
 
 
 
-<table>
-  <thead>
-    <tr>
-      <th><h3>Categories Management</h3></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h3>Category Management:</h3>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Show', category_path(category) %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Delete', category_path(category), method: :delete, confirm: 'Are you sure you want to delete this category?' %></td>
-    <% end %>
-  </tbody>
-</table>
+<%= render 'categories/indexview' %>
 
-<br>
 
-<%= link_to 'New Category', new_category_path %>
+<h3>SubCategory Management:</h3>
+<%= render 'subcategories/indexview' %>
 
 
 <h3>Video Management:</h3>
+
+<%= render 'videos/indexview' %>

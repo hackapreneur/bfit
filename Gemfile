@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem "simple_form", "~> 3.0.0"
 gem 'devise'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 
 group :development, :test do
      gem 'sqlite3'
@@ -15,7 +17,6 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-ruby '2.0.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -44,7 +45,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0', platform: "ruby"
+gem 'bcrypt-ruby', '~> 3.0.1', platform: "ruby"
 
 # Use unicorn as the app server
 # gem 'unicorn'

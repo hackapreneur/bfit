@@ -9,6 +9,7 @@ class CategoriesController < ApplicationController
 
   def new
   	@category = Category.new
+    @category.build_subcategory
   end
 
   def create
@@ -16,7 +17,7 @@ class CategoriesController < ApplicationController
 
   	if @category.save
   		flash[:notice] = "Created new Category."
-  		redirect_to categories_url
+  		redirect_to adminCP_path
   	else
   		render 'new'
   	end 
@@ -31,7 +32,7 @@ class CategoriesController < ApplicationController
 
   	if @category.update_attributes(category_params)
   		flash[:notice] = "Updated Category."
-  		redirect_to categories_url
+  		redirect_to :back
   	else
   		render 'edit' 
   	end
@@ -43,13 +44,14 @@ class CategoriesController < ApplicationController
 
   	@category.destroy
 
-  	flash[:notice] = "Deleted Category"
-  	redirect_to categories_url
+  	flash[:notice] = "Deleted " + @category.name + " Category"
+  	redirect_to :back
   end
 
   private
  		def category_params
- 			params.require(:category).permit(:name)
+ 			params.require(:category).permit(:name, subcategory_attributes[:name])
+
  		end
 
 end
