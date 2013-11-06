@@ -76,7 +76,7 @@
           <li><%= link_to current_user.name, edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
-          <li><%= link_to "Click Here To Join!", new_user_registration_path , {:style=>'color:#000000; font-weight:bold', :class => "css_class"} %></li>
+          <li><%= link_to "Click Here To Join!", root_path , {:style=>'color:#000000; font-weight:bold', :class => "css_class"} %></li>
           <li><%= link_to "Member Login", new_user_session_path %></li>
       <% end %>
 
